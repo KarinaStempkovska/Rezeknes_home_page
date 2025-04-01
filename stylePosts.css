@@ -1,0 +1,57 @@
+header {
+  background-image: url(https://maltasdzksu.lv/images/slides/karte2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  padding: 100px 0;
+}
+
+/* Sadarbības partneri*/
+.partneri {
+  margin-top: 15px;
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+  width: 93%;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 20px;
+  }
+  
+  .pagination a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    background: white;
+    transition: 0.3s;
+  }
+  
+  .pagination a:hover {
+    background: #f1f1f1;
+  }
+  
+  .pagination a.active {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+  
+  .pagination a.disabled {
+    pointer-events: none;
+    color: grey;
+    border-color: grey;
+    background: #f8f8f8;
+  }
+  
+  #pagination-controls{
+    margin-bottom: 20px;
+  }

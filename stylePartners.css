@@ -1,0 +1,96 @@
+#sadarb {
+    display: block !important;
+    background-color: rgb(92, 20, 20);
+    text-align: center;
+    color: white;
+    padding: 10px;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 26px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    user-select: none;
+    border-radius: 5px;
+    text-shadow: 3px 3px black;
+  }
+  
+  .logo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Логотипы (увеличенный размер) */
+  .logo {
+    height: 55px;
+    max-width: 180px;
+    object-fit: contain;
+  }
+  
+  /* Делаем логотипы изначально в две строки */
+  @media (min-width: 769px) {
+  
+    /* Для больших экранов */
+    .logo {
+      flex: 1 1 calc(100% / 7 - 15px);
+      /* 7 логотипов в строке */
+    }
+  }
+  
+  /* Для планшетов - 4 логотипа в строке */
+  @media (max-width: 1024px) {
+    .logo {
+      flex: 1 1 calc(100% / 4 - 15px);
+      /* 4 логотипа в строке */
+      height: 70px;
+      max-width: 160px;
+    }
+  }
+  
+  /* Для телефонов - 3 логотипа в строке */
+  @media (max-width: 768px) {
+    .logo {
+      flex: 1 1 calc(100% / 3 - 15px);
+      /* 3 логотипа в строке */
+      height: 60px;
+      max-width: 140px;
+    }
+  }
+  
+  /* Тултип */
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Скрываем текст тултипа */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+  
+    /* Размещение над логотипом */
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.4 ease-in-out;
+  }
+  
+  /* Показываем тултип при на*/
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  ul{
+   list-style: none;
+  }

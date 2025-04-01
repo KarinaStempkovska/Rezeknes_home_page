@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  font-family: 'Times New Roman', Times, serif;
+  box-sizing: border-box
+}
+body{
+  margin: 0;
+}
+
+header {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.mySlides img {
+  width: 100%;
+  height: 100%; /* Высота на весь экран */
+  object-fit: cover; /* Обрезает изображение, сохраняя пропорции */
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  height:50vh; /* 40% от высоты экрана */
+  overflow: hidden; /* Чтобы не было прокрутки */
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev {
+  left: 0; /* Прижимаем к левому краю */
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Контейнер для точек внутри слайд-шоу */
+.dots-container {
+  position: absolute;
+  bottom: 30px; /* Отступ снизу */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+  z-index: 10; /* Поверх изображений */
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  background-color: rgba(255, 255, 255, 0.7); /* Полупрозрачный */
+  border-radius: 50%;
+  transition: background-color 0.6s ease;
+  border: 1px solid white;
+}
+
+.active, .dot:hover {
+  background-color: white;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+h2 {
+  color: white;
+  background-color: rgb(92, 20, 20);
+  user-select: none;
+  text-shadow: 3px 3px black;
+  text-align: center;
+  font-weight: 100;
+  font-style: italic;
+  font-size: 32px;
+  width: 100%;
+  padding: 10px;
+  margin: 0px auto 10px;
+}
+
+h3{
+  font-size: 28px;
+  margin: 20px 50px 15px;
+}
+
+#footer {
+  border: 1px solid grey;
+  border-radius: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  width: 86%;
+  padding: 5px 40px;
+  margin-bottom: 15px;
+}
+
+.col {
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.info {
+  color: rgb(93, 93, 93);;
+}
+
+/* Sadarbības partneri*/
+.partneri {
+  margin-top: 15px;
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+  width: 93%;
+}
+
+#sadarb {
+  display: block !important;
+  background-color: rgb(92, 20, 20);
+  text-align: center;
+  color: white;
+  padding: 10px;
+  font-weight: 100;
+  font-style: italic;
+  font-size: 26px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  user-select: none;
+  border-radius: 5px;
+  text-shadow: 3px 3px black;
+}
+
+.logo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Логотипы (увеличенный размер) */
+.logo {
+  height: 55px;
+  max-width: 180px;
+  object-fit: contain;
+}
+
+/* Делаем логотипы изначально в две строки */
+@media (min-width: 769px) {
+
+  /* Для больших экранов */
+  .logo {
+    flex: 1 1 calc(100% / 7 - 15px);
+    /* 7 логотипов в строке */
+  }
+}
+
+/* Для планшетов - 4 логотипа в строке */
+@media (max-width: 1024px) {
+  .logo {
+    flex: 1 1 calc(100% / 4 - 15px);
+    /* 4 логотипа в строке */
+    height: 70px;
+    max-width: 160px;
+  }
+}
+
+/* Для телефонов - 3 логотипа в строке */
+@media (max-width: 768px) {
+  .logo {
+    flex: 1 1 calc(100% / 3 - 15px);
+    /* 3 логотипа в строке */
+    height: 60px;
+    max-width: 140px;
+  }
+}
+
+/* Тултип */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Скрываем текст тултипа */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+
+  /* Размещение над логотипом */
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.4 ease-in-out;
+}
+
+/* Показываем тултип при на*/
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+ul{
+ list-style: none;
+}
